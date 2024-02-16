@@ -9,25 +9,12 @@
 	  
 	  	
 
-    function fetchPHPFile() {
-    // AJAX request to fetch PHP file content
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          // PHP file content received successfully
-          var phpContent = xhr.responseText;
-          console.log(phpContent); // Output PHP file content to console
-        } else {
-          console.error('Failed to fetch PHP file');
-        }
-      }
-    };
-    xhr.open('GET', 'index.php', true);
-    xhr.send();
-  }
-   
-  fetchPHPFile();
+    var files = <?php $out = array();
+foreach (glob('ekipa/*.php') as $filename) {
+    $p = pathinfo($filename);
+    $out[] = $p['filename'];
+}
+echo json_encode($out); ?>;
             
     var button = document.createElement('button');
     button.textContent = 'Click Me';
