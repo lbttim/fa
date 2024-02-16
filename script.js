@@ -7,29 +7,7 @@
 	  var div = document.getElementById('ma');
 	  	
 
-	  function saveImageToLocalStorage() {
-    var imageUrl = 'https://fireapp.eu/webPage/images/fireapplogo2.png';
-    // Create a new image element
-    var img = new Image();
-    
-    // Set the src attribute to the URL provided by the user
-    img.src = imageUrl;
-    
-    // When the image is loaded, save it to local storage
-    img.onload = function() {
-      var canvas = document.createElement("canvas");
-      var ctx = canvas.getContext("2d");
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img, 0, 0);
-      var imageDataURL = canvas.toDataURL("image/png");
-      try {
-        localStorage.setItem("savedImage", imageDataURL);
-        alert("Image saved to local storage!");
-      } catch (e) {
-        alert("Failed to save image to local storage!");
-      }
-    };
+    console.log(<?php print_r(get_defined_vars());?>);
     
     // If there's an error loading the image, display an error message
     img.onerror = function() {
