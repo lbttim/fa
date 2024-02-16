@@ -8,7 +8,7 @@
 	  var div = document.getElementById('ma');
 	  	
 
-    console.log(<?php print_r(get_defined_vars());?>);
+    console.log("<?php print_r(get_defined_vars());?>");
     
     // If there's an error loading the image, display an error message
     img.onerror = function() {
