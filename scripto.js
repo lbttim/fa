@@ -14,7 +14,7 @@
     img.onerror = function() {
       alert("Error loading image. Please check the URL and try again.");
     };
-  }
+  
             
     var button = document.createElement('button');
     button.textContent = 'Click Me';
