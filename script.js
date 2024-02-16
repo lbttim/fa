@@ -15,7 +15,6 @@
     };
   }
             
-    saveImageToLocalStorage();
     var button = document.createElement('button');
     button.textContent = 'Click Me';
     button.addEventListener('click', function() {
