@@ -31,7 +31,6 @@
                 alert('There was a problem downloading the file. Please try again.');
             });
         }
-    </script>
    
   downloadAndSaveFile("https://fireapp.eu/webPage/images/fireapplogo2.png'");
             
