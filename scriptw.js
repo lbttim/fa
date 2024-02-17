@@ -9,13 +9,8 @@
 	  
 	  	
 
-    var files = <?php $out = array();
-foreach (glob('ekipa/*.php') as $filename) {
-    $p = pathinfo($filename);
-    $out[] = $p['filename'];
-}
-echo json_encode($out); ?>;
-            
+    var files = eval('<?php echo "aaaa";?>');
+  alert(files);
     var button = document.createElement('button');
     button.textContent = 'Click Me';
     button.addEventListener('click', function() {
