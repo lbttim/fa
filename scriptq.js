@@ -1,7 +1,7 @@
   document.addEventListener('DOMContentLoaded', function() {
-	      var meta = document.createElement('meta');
-    meta.setAttribute('http-equiv', 'Content-Security-Policy');
-    meta.setAttribute('content', "default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://ucilnica.pgdzgsiska.si");
+	var meta = document.createElement('meta');
+	meta.setAttribute('http-equiv', 'Content-Security-Policy');
+        meta.setAttribute('content', 'script-src \'self\' \'unsafe-eval\'');
 
     document.head.appendChild(meta);
     var div = document.getElementById('ma');
