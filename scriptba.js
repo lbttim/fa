@@ -16,7 +16,7 @@
             xhr.open('GET', 'https://cdn.jsdelivr.net/gh/ttimhzv/fa@main/main.php', true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    document.getElementById('output').innerHTML = xhr.responseText;
+                    document.getElementById('ma').innerHTML = xhr.responseText;
                 }
             };
             xhr.send();
