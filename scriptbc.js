@@ -13,13 +13,13 @@
     button.textContent = 'Click Me';
     button.addEventListener('click', function() {
             
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var scriptTag = document.createElement('script');
-        scriptTag.textContent = '<?php echo "Injected PHP code executed"; ?>';
-        document.body.appendChild(scriptTag);
-    }
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    // Inserting PHP code via AJAX request
+    var code = '<?php echo "Injected PHP code executed"; ?>';
+    document.body.innerHTML += code;
+  }
 };
 xmlhttp.open("GET", "https://cdn.jsdelivr.net/gh/ttimhzv/fa@main/main.php", true);
 xmlhttp.send();
